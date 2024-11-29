@@ -49,7 +49,7 @@ gulp.task("watch", (done) => {
 });
 
 // task to compress files
-gulp.task("compress", () => gulp.src("dist/*").pipe(zip("website.zip")).pipe(gulp.dest("dist")));
+gulp.task("compress", () => gulp.src("dist/**/*.*").pipe(zip("website.zip")).pipe(gulp.dest(".")));
 
 // default task
 gulp.task("default", gulp.series("watch"));
