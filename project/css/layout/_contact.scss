@@ -1,0 +1,15 @@
+@use "../helpers/variables" as var;
+
+.contact {
+    a {
+        border-radius: 6px;
+        transition: var.$main-transition;
+        &:hover {
+            opacity: 0.7;
+        }
+        i {
+            border-radius: 6px;
+            background-color: green;
+        }
+    }
+}

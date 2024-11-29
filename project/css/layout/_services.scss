@@ -1,0 +1,19 @@
+// Imports
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as *;
+
+.services {
+    .container {
+        @include grid(3);
+        .box {
+            border-radius: 6px;
+            box-shadow: 0 5px 25px rgba(0 0 0 / 15%);
+            i {
+                background-color: var.$main-color;
+                color: white;
+                width: 76px;
+                border-radius: 6px;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@mixin media($type) {
+  @if $type == "sm" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $type == "md" {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $type == "lg" {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $type == "msm" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $type == "mmd" {
+    @media (min-width: 991px) {
+      @content;
+    }
+  } @else if $type == "mlg" {
+    @media (min-width: 1199px) {
+      @content;
+    }
+  }
+}
+
+@mixin grid($col) {
+  @if $col == 3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px;
+  } @else if $col == 4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+  }
+}

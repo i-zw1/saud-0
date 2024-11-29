@@ -1,0 +1,54 @@
+// Imports
+@use "../helpers/variables" as var;
+
+// Global Values
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none !important;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.main-title {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px;
+    background-color: var.$main-color;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 100px;
+    border-radius: 6px;
+}
+
+// Framework
+
+.bg-section {
+    background-color: #f0f0f0 !important;
+}
+
+.text-main {
+    color: var.$main-color;
+}
+
+.bg-main {
+    background-color: var.$main-color;
+}

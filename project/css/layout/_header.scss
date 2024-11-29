@@ -1,0 +1,80 @@
+// Import Helpers
+@use "../helpers/variables" as var;
+
+// Header Start
+
+header {
+    z-index: 999;
+    .container {
+        box-shadow: 0 5px 25px rgba(0 0 0 / 15%);
+        border-radius: 15px;
+        .logo {
+            color: var.$main-color;
+        }
+        ul {
+            li {
+                &:not(:last-of-type) {
+                    margin-right: 15px;
+                }
+
+                a {
+                    color: var.$main-color;
+                    transition: var.$main-transition;
+                    width: 100px;
+                    border-radius: 6px;
+                    &:hover {
+                        color: var.$secondary-color;
+                    }
+                    &.active {
+                        background-color: var.$main-color;
+                        color: white;
+                        border: 2px solid var.$main-color;
+                        &:hover {
+                            background-color: white;
+                            color: var.$main-color;
+                        }
+                    }
+                }
+            }
+        }
+        i {
+            color: var.$main-color;
+            transition: var.$main-transition;
+            cursor: pointer;
+        }
+    }
+}
+
+.mobile-links {
+    z-index: 5;
+    height: 100vh;
+    background-color: #e6e6e6;
+    transition: var.$main-transition;
+    ul {
+        li {
+            a {
+                background-color: white !important;
+                color: var.$main-color;
+                transition: var.$main-transition;
+                border-radius: 6px;
+                &:hover {
+                    opacity: 0.7;
+                }
+                z-index: 6;
+
+                &.active {
+                    background-color: var.$main-color !important;
+                    color: white !important;
+                    border: 2px solid var.$main-color;
+                    transition: var.$main-transition;  
+                    &:hover {
+                        background-color: white !important;
+                        color: var.$main-color !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Header End

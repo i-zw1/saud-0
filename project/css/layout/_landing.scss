@@ -1,0 +1,65 @@
+// imports
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as *;
+
+// Landing
+
+.landing {
+    min-height: 100vh;
+    .container {
+        .text {
+            max-width: 100%;
+            @include media("mmd") {
+                width: 50% !important;
+            }
+            @include media("md") {
+                text-align: center;
+            }
+            .social {
+                @include media("md") {
+                    justify-content: center;
+                }
+                a {
+                    &:not(:last-of-type) {
+                        margin-right: 15px;
+                    }
+                    $colors: (1: red, 2: #0a66c2, 3: #191919);
+                    @each $number, $color in $colors {
+                        &:nth-of-type(#{$number}) {
+                            i {
+                                background-color: $color;
+                            }
+                        }
+                    }
+                    width: 52px !important;
+                    i {
+                        color: white;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            h1 {
+                color: var.$main-color;
+            }
+            p {
+                line-height: 1.6;
+                font-size: 18px;
+            }
+            > a {
+                border-radius: 6px;
+                background-color: var.$main-color;
+                width: fit-content;
+                transition: var.$main-transition;
+                &:hover {
+                    opacity: 0.7;
+                }
+                @include media("md") {
+                    margin: {
+                        left: auto;
+                        right: auto;
+                    };
+                }
+            }
+        }
+    }
+}
