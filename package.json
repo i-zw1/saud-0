@@ -1,7 +1,7 @@
 {
   "name": "clients-info",
   "version": "1.0.0",
-  "description": "This is JSON Project",
+  "description": "This is a Project Of Personal Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
